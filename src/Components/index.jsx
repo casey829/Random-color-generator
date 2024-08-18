@@ -37,17 +37,29 @@ function RandomColor() {
   }, [typeOfColor]);
 
   return (
+
+   <div style={{
+      width: "100vw",
+        height: "100vh",
+        background: color,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        color: "#fff",
+   }}>
     
     <div style={{
-       width: '100vw',
-       height: '100vh',
-       background:color,
+       display: 'flex',
+       gap: '20px',
+       marginBottom: '20px',
     }}>
       <button onClick={() => setTypeOfColor("hex")}>Create HEX color</button>
       <button onClick={() => setTypeOfColor("rgb")}>Create RGB color</button>
       <button onClick={typeOfColor === "hex" ? handleCreateRandomHexColor : handleCreateRandomRgbColor}>
         Generate Random Color
       </button>
+      </div>
       <div style={{
          display: 'flex',
          justifyContent: 'center',
